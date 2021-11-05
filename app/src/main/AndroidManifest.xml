@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.accentype.android.softkeyboard">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/ime_name"
+        android:name=".Global"
+        android:theme="@style/Theme.AppCompat">
+        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".DashBoardActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Themes"></activity>
+        <activity android:name=".SplashActivity"/>
+
+
+        <service
+            android:name=".SoftKeyboard"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+
+        <activity
+            android:name=".ImePreferences"
+            android:label="@string/settings_name" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        <meta-data android:name="applovin.sdk.key"
+            android:value="7S4tBl4QAkgCmaPc9b96Pz4kW4H_RyzGuFsysDdMTokGL8fn2n00ls2ZmJri3gvsCH6CarU_fxgXREfdxbrJo9"/>
+
+    </application>
+
+</manifest>

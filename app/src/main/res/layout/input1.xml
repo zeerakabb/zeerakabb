@@ -1,0 +1,17 @@
+
+<com.accentype.android.softkeyboard.LatinKeyboardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboard1"
+    android:layout_alignParentBottom="true"
+    android:paddingTop="@dimen/keyboard_padding_top"
+    android:paddingBottom="@dimen/keyboard_padding_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/browser_actions_bg_grey"
+    android:keyBackground="@color/blue"
+    android:keyTextColor="@android:color/white"
+    android:keyTextSize="@dimen/key_font_size"
+    android:verticalCorrection="@dimen/vertical_correction"
+    android:shadowRadius="0.0"
+    android:keyPreviewLayout="@layout/white_preview"
+    android:keyPreviewHeight="@dimen/key_preview_window_size" />
